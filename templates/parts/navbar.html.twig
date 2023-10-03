@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-evenly bg-dark border-bottom border-body mb-5" data-bs-theme="dark">
+
+	<a class="btn" href="{{ path("app_connection") }}">HOME PAGE</a>
+	{% if app.user %}
+		<a class="btn" href="{{ path("app_logout") }}">LOGOUT</a>
+	{% else %}
+		<a class="btn" href="{{ path("app_login") }}">LOGIN</a>
+
+	{% endif %}
+
+	{%  if is_granted("ROLE_ADMIN") %}
+		<a class="btn" href="{{ path("app_admin") }}">ADMIN</a>
+	{% endif %}
+</div>
+
+
