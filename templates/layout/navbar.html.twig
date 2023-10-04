@@ -1,0 +1,20 @@
+
+<div class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+<div class="container d-flex justify-content-around">
+
+	<a class="btn btn-dark" href="#">BUSINESS DIRECTORY</a>
+	{% if app.user %}
+		<a class="btn btn-dark" href="{{ path("app_logout") }}">LOGOUT</a>
+	{% else %}
+		<a class="btn btn-dark" href="{{ path("app_login") }}">LOGIN</a>
+
+	{% endif %}
+
+	{%  if is_granted("ROLE_ADMIN") %}
+		<a class="btn btn-dark" href="{{ path("app_user_index") }}">ADMIN</a>
+	{% endif %}
+</div>
+</div>
+
+

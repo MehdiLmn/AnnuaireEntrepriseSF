@@ -11,11 +11,11 @@ class ConnectionController extends AbstractController
 {
     public function __construct(private UserRepository $userRepository) {
     }
-    #[Route('/employes', name: 'app_connection')]
+    #[Route('/connection', name: 'app_trombinoscope')]
     public function index(): Response
     {
         $users = $this->userRepository->findAll();
-        return $this->render('connection/index.html.twig', [
+        return $this->render('trombinoscope/index.html.twig', [
             'users' => $users,
         ]);
     }

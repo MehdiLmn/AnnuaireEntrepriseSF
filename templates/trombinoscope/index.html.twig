@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ConnectionController!{% endblock %}
+{% block title %}Trombinoscope{% endblock %}
 
 {% block body %}
 {% for user in users %}
@@ -12,8 +12,6 @@
         {% for contractType in user.contractType %}
         <p>{{contractType.name}}</p>
         {% endfor %}
-		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		<a href="#" class="btn btn-primary">Go somewhere</a>
 	</div>
 </div>
 
